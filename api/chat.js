@@ -66,10 +66,6 @@ export default async function handler(req, res) {
       history: [{ role: "user", parts: [{ text: systemPrompt }] }, { role: "model", parts: [{ text: "Understood. I am the MHS Assistant." }] }],
     });
 
-    const result = await chat.sendMessage(message);
-    const response = await result.response;
-    res.status(200).json({ reply: response.text() });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
+    
   }
 }
