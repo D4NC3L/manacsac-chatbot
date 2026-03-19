@@ -19,6 +19,6 @@ async function sendMessage() {
         chatBox.innerHTML += `<div class="msg bot">${data.reply}</div>`;
         chatBox.scrollTop = chatBox.scrollHeight;
     } catch (err) {
-        chatBox.innerHTML += `<div class="msg bot">Error: Hindi makakonekta sa server.</div>`;
+        chatBox.innerHTML += `<div class="msg bot">Error.</div>`;
     }
 }
