@@ -1,9 +1,35 @@
 {
-  "name": "pangalan-ng-project",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  }
+  "bot_name": "MHS Chatbot",
+  "version": "1.0",
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "good day", "hey"],
+      "responses": ["Hello! How can I help you?", "Hi there! What do you need?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "see you", "goodbye"],
+      "responses": ["Goodbye!", "See you next time!"]
+    },
+    {
+      "tag": "school_info",
+      "patterns": ["what is MHS", "about the school", "school info"],
+      "responses": [
+        "Manacsac High School is a secondary school dedicated to quality education."
+      ]
+    },
+    {
+      "tag": "admission",
+      "patterns": ["how to enroll", "admission process", "enrollment"],
+      "responses": [
+        "To enroll, visit the school office and bring your requirements like report card and birth certificate."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you"],
+      "responses": ["You're welcome!", "No problem!"]
+    }
+  ]
 }
