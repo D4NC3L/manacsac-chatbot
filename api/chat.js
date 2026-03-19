@@ -6,13 +6,12 @@ export default async function handler(req, res) {
   }
 
   const { message } = req.body;
-  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY=AIzaSyCssO34Ya48BXdiVF2hDo2mkPSLO7IaaE8);
-  const model = genAI.getGenerativeModel({ model: "gemini 1.5" });
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5" });
 
   // KNOWLEDGE BASE (Dito ilalagay ang info ng school)
   const systemPrompt = `
   Ikaw ay isang AI Assistant para sa Manacsac High School (MHS) sa Guimba, Nueva Ecija.
-  Website: https://manacsac-chatbot.vercel.app (Knowledge Base Link)
   
   Impormasyon tungkol sa school:
   - Pangalan: Manacsac High School (MHS)
@@ -66,6 +65,10 @@ export default async function handler(req, res) {
       history: [{ role: "user", parts: [{ text: systemPrompt }] }, { role: "model", parts: [{ text: "Understood. I am the MHS Assistant." }] }],
     });
 
-    
+    const result = await chat.sendMessage(message);
+    const response = await result.response;
+    res.status(200).json({ reply: response.text() });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 }
