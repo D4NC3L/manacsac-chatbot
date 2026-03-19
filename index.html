@@ -20,7 +20,7 @@
         <div id="chat-box"></div>
 
         <div class="input-area">
-            <input type="text" id="user-input" placeholder="Magtanong tungkol sa MHS...">
+            <input type="text" id="user-input" placeholder="Ask a question about MHS..." onkeypress="if(event.key === 'Enter') sendMessage()">
             <button onclick="sendMessage()">➤</button>
         </div>
     </div>
