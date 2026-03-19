@@ -8,7 +8,7 @@ import {
 
 async function main() {
   const ai = new GoogleGenAI({
-    apiKey: process.env['GEMINI_API_KEY'],
+    apiKey: process.env['AIzaSyCWJbQz8Ew9pACp8Hfaik3B0WIUY6cTrsU'],
   });
   const tools = [
     {
@@ -22,7 +22,7 @@ async function main() {
     },
     tools,
   };
-  const model = 'gemini-3-flash-preview';
+  const model = 'gemini 2.5';
   const contents = [
     {
       role: 'user',
