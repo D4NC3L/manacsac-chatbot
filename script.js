@@ -1,5 +1,4 @@
 import { GoogleGenAI } from '@google/genai';
-import 'dotenv/config';
 
 // Replace 'YOUR_ACTUAL_API_KEY' with your key or use an environment variable
 const API_KEY = process.env.GEMINI_API_KEY; 
