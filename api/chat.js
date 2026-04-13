@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   // SYSTEM PROMPT: Dito natin ilalagay ang knowledge base link
   const systemInstruction = `
     You are the official AI Assistant for Manacsac High School.
-    Knowledge Base: Use the information from this website: [LINK NG WEBSITE DITO].
+    Knowledge Base: Use the information from this website: https://www.facebook.com/manacsachighschool/
     Behavior: 
     - Be professional yet approachable (Taglish is okay).
     - Answer FAQs about enrollment, strands, and school facilities.
