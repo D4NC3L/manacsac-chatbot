@@ -8,7 +8,7 @@ import {
 
 async function main() {
   const ai = new GoogleGenAI({
-    apiKey: process.env['GEMINI_API_KEY'],
+    apiKey: process.env[AIzaSyAXM2Bxw-LKqftm3DeMi8NANAW3RRK2mN0],
   });
   const config = {
     thinkingConfig: {
